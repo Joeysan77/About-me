@@ -74,7 +74,7 @@ title {
 }
 .div3 {
     height:100px;
-    width:360px;
+    width:100%;
     background-color:#eff3fa;
     border:4px solid;
     border-color:#d3e3fd;
@@ -99,7 +99,7 @@ title {
     height:50px;
     background-color:#000922;
     margin-left:
-    width:360px;
+    width:100%;
     border:none;
 }
 #a1 {
@@ -188,6 +188,7 @@ title {
   bottom: -50px;
   margin-left:334px;
   height: 50px;
+  right:0;
   width: 25px;
   margin-bottom:50px;
   border-top-right-radius:29px;
@@ -783,11 +784,6 @@ body {
 <button class="themes" id="themes"><label class="switch">
   <input type="checkbox" onclick="darktheme()" name="fooby[1][]" value="1">
   <span class="slider round"></span></label><b>Dark Theme</b></button> 
-  <button class="themesa" id="themesa"><b>Light Theme</b>
-       <label class="switch5"> <input value="1" type="checkbox" onclick="lighttheme()" name="fooby[1][]">
-  <span class="slider round"></span>
-</label>
-  </button>
  </div>
  <style>
      
@@ -1002,7 +998,10 @@ function opensettings(){
 function closesettings(){
     document .getElementById ("div8").style .width ="0px"
 }
+nj = 1
 function darktheme(){
+   if (nj == 1) {
+   nj = 2
     document .getElementById ("div8").style .background ="#2d2e31"
     document .getElementById ("div").style .background ="#2d2e31"
     document .getElementById ("div").style .borderColor="#1f1f1f"
@@ -1137,15 +1136,16 @@ function darktheme(){
                               document .getElementById ("div8").style .borderColor ="#1f1f1f"
                document .getElementById ("themes").style .borderColor  ="#1f1f1f"
                
-               document .getElementById ("themesa").style .borderColor ="#1f1f1f"
+             
                document .getElementById ("div2").style .background ="rgba (20,20,20,20)"
                document .getElementById ("inputd").style .color="gray"
                document .getElementById ("body").style .color ="white"
                document .getElementById ("div9").style .borderColor ="#1f1f1f"
                document .getElementById ("aa1").style .color ="#2f5a78"
-               document .getElementById ("aa2").style .color ="#2f5a78"
-}
-function lighttheme(){
+               document .getElementById ("aa2").style .color ="#2f5a78"}
+               else if (nj == 2) {
+               
+nj = 1
     document .getElementById ("div8").style .background ="#eff3fa"
     document .getElementById ("div").style .background ="#eff3fa"
     document .getElementById ("div").style .borderColor="#d3e3fd"
@@ -1280,7 +1280,7 @@ function lighttheme(){
                document .getElementById ("div8").style .borderColor ="#d3e3fd"
                document .getElementById ("themes").style .borderColor ="#d3e3fd"
                document .getElementById ("div2").style .background ="black"
-               document .getElementById ("themesa").style .borderColor ="#d3e3fd"
+               
                document .getElementById ("div9").style .borderColor ="#d3e3fd"
                document .getElementById ("aa1").style .color ="black"
                document .getElementById ("aa2").style .color ="black"
@@ -1290,7 +1290,7 @@ function lighttheme(){
 
 function search() {
     document .getElementById ("img9").style .opacity="40%"
-    
+    }
 }
 function work(){
     alert("Still Working On It")
